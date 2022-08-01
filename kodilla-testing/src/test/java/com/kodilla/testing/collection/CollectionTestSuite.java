@@ -46,7 +46,7 @@ public class CollectionTestSuite {
             numbers.add(i);
         }
         //When
-        List<Integer> evenNumbers = numbersExterminator.exterminate(numbers);
+        List<Integer> evenNumbersList = numbersExterminator.exterminate(numbers);
         //List<Integer> expectedEvenList = new ArrayList<>();
         //for (int i = 0; i < 100; i += 2) {
            //expectedEvenList.add(i);
@@ -54,7 +54,7 @@ public class CollectionTestSuite {
         Integer expectedEvenArray[] = { 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98 };
         List<Integer> expectedEvenList = Arrays.asList(expectedEvenArray);
         //Then
-        Assertions.assertEquals(evenNumbers, expectedEvenList);
-        System.out.println("List after extermination contains: " + numbers);
+        Assertions.assertEquals(evenNumbersList, expectedEvenList);
+        System.out.println("List after extermination contains: " + evenNumbersList);
     }
 }

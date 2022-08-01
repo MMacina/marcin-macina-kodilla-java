@@ -5,16 +5,16 @@ import java.util.*;
 public class OddNumbersExterminator {
 
     public List<Integer> exterminate(ArrayList<Integer> numbers) {
+        List<Integer> evenNumbers = new ArrayList<>();
         if (numbers.isEmpty()) {
             System.out.println("List is empty");
         } else {
-            for (int i=0; i < numbers.size(); i++) {
-                Integer tempNumber = numbers.get(i);
-                if (tempNumber % 2 != 0) {
-                    numbers.remove(tempNumber);
+            for (Integer tempNumber : numbers) {
+                if (tempNumber % 2 == 0) {
+                    evenNumbers.add(tempNumber);
                 }
             }
         }
-        return numbers;
+        return evenNumbers;
     }
 }
