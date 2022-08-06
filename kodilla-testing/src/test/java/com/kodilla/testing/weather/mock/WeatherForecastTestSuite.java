@@ -63,8 +63,8 @@ public class WeatherForecastTestSuite {
     }
 
     @Test
-    @DisplayName("Median temperature calculation test")
-    void testMedianTemperatureWithMock() {
+    @DisplayName("Median temperature calculation test - odd list")
+    void testMedianTemperatureWithMockOddList() {
 
         //Given
         WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
@@ -74,5 +74,20 @@ public class WeatherForecastTestSuite {
 
         //Then
         Assertions.assertEquals(25.50, medianTemperature);
+    }
+
+    @Test
+    @DisplayName("Median temperature calculation test - even list")
+    void testMedianTemperatureWithMockEvenList() {
+
+        //Given
+        temperaturesMock.getTemperatures().put("Przemysl", 22.9);
+        WeatherForecast weatherForecast = new WeatherForecast(temperaturesMock);
+
+        //When
+        Double medianTemperature = weatherForecast.calculateMedianTemperature();
+
+        //Then
+        Assertions.assertEquals(24.20, medianTemperature);
     }
 }
