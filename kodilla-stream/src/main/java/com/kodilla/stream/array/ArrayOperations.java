@@ -8,7 +8,9 @@ public interface ArrayOperations {
         String printNumbers = IntStream.range(0, numbers.length).toString();
         System.out.println(printNumbers);
 
-        OptionalDouble average = IntStream.rangeClosed(0, (numbers.length + 1)).average();
+        OptionalDouble average = IntStream.range(0, numbers.length)
+                .map(n -> numbers[n])
+                .average();
 
         return average;
     }
