@@ -1,30 +1,54 @@
 package com.kodilla.stream.world;
 
-
 import org.junit.jupiter.api.Test;
-
 import java.math.BigDecimal;
-import java.util.Collections;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WorldTestSuite {
 
+    private World createTheWorld() {
+
+        //Creating Countries
+        Country poland = new Country("Poland", new BigDecimal("123456789"));
+        Country greatBritain = new Country("Great Britain", new BigDecimal("123456789"));
+        Country croatia = new Country("Croatia", new BigDecimal("123456789"));
+        Country brazil = new Country("Brazil", new BigDecimal("987654321"));
+        Country chile = new Country("Chile", new BigDecimal("987654321"));
+        Country argentina = new Country("Argentina", new BigDecimal("987654321"));
+        Country nigeria = new Country("Nigeria", new BigDecimal("1122334455"));
+        Country ivoryCoast = new Country("IvoryCoast", new BigDecimal("1122334455"));
+
+        //Creating Continents
+        Continent europe = new Continent("Europe");
+        europe.addCountry(poland);
+        europe.addCountry(greatBritain);
+        europe.addCountry(croatia);
+
+        Continent southAmerica = new Continent("South America");
+        southAmerica.addCountry(brazil);
+        southAmerica.addCountry(chile);
+        southAmerica.addCountry(argentina);
+
+        Continent africa = new Continent("Africa");
+        africa.addCountry(nigeria);
+        africa.addCountry(ivoryCoast);
+
+        // Creating the World
+        World theWorld = new World();
+        theWorld.addContinent(europe);
+        theWorld.addContinent(southAmerica);
+        theWorld.addContinent(africa);
+
+        return theWorld;
+    }
+
     @Test
     void testGetPeopleQuantity() {
-
-        World world = new World();
-        world.addContinent(new Continent("Europe", Collections.singletonList(new Country("Poland", new BigDecimal("123456789")))));
-        world.addContinent(new Continent("Europe", Collections.singletonList(new Country("Great Britain", new BigDecimal("123456789")))));
-        world.addContinent(new Continent("Europe", Collections.singletonList(new Country("Croatia", new BigDecimal("123456789")))));
-        world.addContinent(new Continent("South America", Collections.singletonList(new Country("Brazil", new BigDecimal("987654321")))));
-        world.addContinent(new Continent("South America", Collections.singletonList(new Country("Chile", new BigDecimal("987654321")))));
-        world.addContinent(new Continent("South America", Collections.singletonList(new Country("Argentina", new BigDecimal("987654321")))));
-        world.addContinent(new Continent("Africa", Collections.singletonList(new Country("Nigeria", new BigDecimal("1122334455")))));
-        world.addContinent(new Continent("Africa", Collections.singletonList(new Country("Ivory Coast", new BigDecimal("1122334455")))));
+        //Given
+        World theWorld = createTheWorld();
 
         //When
-        BigDecimal worldPopulation = world.getPeopleQuantity();
+        BigDecimal worldPopulation = theWorld.getPeopleQuantity();
         BigDecimal expectedPopulation = new BigDecimal("5578002240");
 
         //Then

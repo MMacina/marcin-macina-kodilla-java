@@ -12,6 +12,14 @@ public final class World {
         world.add(continent);
     }
 
+    public boolean removeContinent(Continent continent) {
+        return world.remove(continent);
+    }
+
+    public List<Continent> getWorld() {
+        return world;
+    }
+
     public BigDecimal getPeopleQuantity() {
         return world.stream()
                 .flatMap(continent -> continent.getCountries().stream())
