@@ -11,7 +11,7 @@ public class ArrayOperationsTestSuite {
     @Test
     void testGetAverage() {
         //Given
-        int numbers[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int numbers[] = { 2, 2, 2, 2, 2, 2, 2, 2, 2 };
 
         //When
         OptionalDouble expectedAverage = ArrayOperations.getAverage(numbers);

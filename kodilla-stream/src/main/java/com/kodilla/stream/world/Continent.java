@@ -1,21 +1,20 @@
 package com.kodilla.stream.world;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public final class Continent {
 
-    private final Country country;
     private final String continentName;
+    private final List<Country> countries;
 
-    public Continent(Country country, String continentName) {
-        this.country = country;
+    public Continent(final String continentName, final List<Country> countries) {
         this.continentName = continentName;
+        this.countries = countries;
     }
 
-    public Country getCountry() {
-        return country;
+    public List<Country> getCountries() {
+        return countries;
     }
 
     public String getContinentName() {
@@ -30,12 +29,5 @@ public final class Continent {
         Continent continent = (Continent) o;
 
         return Objects.equals(continentName, continent.continentName);
-    }
-
-    public List<Country> countriesOnContinent() {
-        List<Country> countriesOnContinent = new ArrayList<>();
-        countriesOnContinent.add(country);
-
-        return countriesOnContinent;
     }
 }
