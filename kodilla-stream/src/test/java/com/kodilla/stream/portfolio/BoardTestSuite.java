@@ -145,5 +145,30 @@ public class BoardTestSuite {
         assertEquals(2, longTasks);
     }
 
+    @Test
+    void testAddTaskListFindAverageTimeToFinalizeTasks() {
+        //Given
+        Board project = prepareTestData();
 
+        //When
+        List<TaskList> inProgressTasks = new ArrayList<>();
+        inProgressTasks.add(new TaskList("In progress"));
+        long daysAmount = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .map(Task::getCreated)
+                .map(ld -> ld.datesUntil(LocalDate.now()))
+                .flatMap(ld -> ld)
+                .count();
+
+        long tasksAmount = project.getTaskLists().stream()
+                .filter(inProgressTasks::contains)
+                .flatMap(tl -> tl.getTasks().stream())
+                .count();
+
+        long averageDaysPerTask = daysAmount/tasksAmount;
+
+        //Then
+        assertEquals(10, averageDaysPerTask);
+    }
 }
