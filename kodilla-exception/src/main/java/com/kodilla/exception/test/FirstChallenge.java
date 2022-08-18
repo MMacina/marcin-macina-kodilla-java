@@ -1,9 +1,16 @@
 package com.kodilla.exception.test;
 
 public class FirstChallenge {
-    public double divide(double a, double b) throws ArithmeticException {
-        if (b == 0) {
-            throw new ArithmeticException();
+    public double divide(double a, double b) {
+
+        try {
+            if (b == 0) {
+                throw new ArithmeticException();
+            }
+        } catch (ArithmeticException ao) {
+            System.out.println("The divider can't equals 0. Chose different divider " + "(\"" + ao + "\").");
+        } finally {
+            System.out.println("The result of the division is:");
         }
         return a / b;
     }
