@@ -9,9 +9,9 @@ public class ExceptionModuleRunner {
         FileReader fileReader = new FileReader();
 
         try {
-            fileReader.readFile();
-        } catch (FileReaderException e) {
-            System.out.println("Problem with reading a file");
+            fileReader.readFile("names.txt");
+        } catch(FileReaderException e) {
+            System.out.println("Problem while reading a file!");
         }
     }
 }
