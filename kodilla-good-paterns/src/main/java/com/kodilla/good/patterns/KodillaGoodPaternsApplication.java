@@ -1,13 +1,19 @@
 package com.kodilla.good.patterns;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.kodilla.good.patterns.challenges.MovieStore;
 
-@SpringBootApplication
+import java.util.stream.Collectors;
+
 public class KodillaGoodPaternsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(KodillaGoodPaternsApplication.class, args);
+    public static void main(String[] args){
+        MovieStore movieStore = new MovieStore();
+
+        String theResultStringOfMovies = movieStore.getMovie().entrySet().stream()
+                .map(entry -> entry.getKey() + entry.getValue().stream().collect(Collectors.joining(" ! ", " ! ", "")))
+                .collect((Collectors.joining(" ! ", "<< ", " >>")));
+
+        System.out.println(theResultStringOfMovies);
     }
 
 }
