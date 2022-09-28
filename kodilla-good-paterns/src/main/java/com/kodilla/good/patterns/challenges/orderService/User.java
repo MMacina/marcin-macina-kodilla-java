@@ -1,4 +1,4 @@
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.good.patterns.challenges.orderService;
 
 public class User {
     private final String userName;
@@ -6,7 +6,8 @@ public class User {
     private final int userTelephoneNumber;
     private final String userAddress;
 
-    public User(final String userName, final String userEmail, final int userTelephoneNumber, final String userAddress) {
+    public User(final String userName, final String userEmail,
+                final int userTelephoneNumber, final String userAddress) {
         this.userName = userName;
         this.userEmail = userEmail;
         this.userTelephoneNumber = userTelephoneNumber;

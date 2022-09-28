@@ -1,9 +1,9 @@
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.good.patterns.challenges.orderService;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class OrderRepositoryProcessor implements OrderRepository{
+public class OrderRepositoryProcessor implements OrderRepository {
     @Override
     public Map<User, OrderRequest> registerOrder(OrderRequest orderRequest) {
 
