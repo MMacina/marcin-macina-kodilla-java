@@ -61,12 +61,12 @@ public final class Flight {
 
     @Override
     public String toString() {
-        return "Flight[" +
+        return "\nFlight[" +
                 "origin='" + origin + '\'' +
                 ", destination='" + destination + '\'' +
                 ", via='" + via + '\'' +
                 ", departureTime=" + departureTime +
                 ", arrivalTime=" + arrivalTime +
-                ']';
+                "]";
     }
 }
