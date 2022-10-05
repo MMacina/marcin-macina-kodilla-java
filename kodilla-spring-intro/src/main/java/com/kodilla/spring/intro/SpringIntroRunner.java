@@ -1,13 +1,12 @@
 package com.kodilla.spring.intro;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KodillaSpringIntroApplication {
+public class SpringIntroRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(KodillaSpringIntroApplication.class, args);
+        System.out.println("Welcome into the intro to spring");
     }
 
 }
