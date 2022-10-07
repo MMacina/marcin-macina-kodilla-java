@@ -1,2 +1,26 @@
-package com.kodilla.spring.calculator;public class Calculator {
+package com.kodilla.spring.calculator;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public final class Calculator {
+
+    private double a;
+    private double b;
+    @Autowired
+    private Display display;
+
+    public void add(double a, double b) {
+        display.displayValue(a+b);
+    }
+    public void sub(double a, double b) {
+        display.displayValue(a-b);
+    }
+    public void mul(double a, double b) {
+        display.displayValue(a*b);
+    }
+    public void dev(double a, double b) {
+        display.displayValue(a/b);
+    }
 }
