@@ -6,21 +6,28 @@ import org.springframework.stereotype.Service;
 @Service
 public final class Calculator {
 
-    private double a;
-    private double b;
     @Autowired
     private Display display;
 
-    public void add(double a, double b) {
+    public double add(double a, double b) {
         display.displayValue(a+b);
+        return a+b;
     }
-    public void sub(double a, double b) {
+
+    public double sub(double a, double b) {
         display.displayValue(a-b);
+        return a-b;
     }
-    public void mul(double a, double b) {
+
+    public double mul(double a, double b) {
         display.displayValue(a*b);
+        return a*b;
     }
-    public void dev(double a, double b) {
+
+    public double dev(double a, double b) {
         display.displayValue(a/b);
+        return a/b;
     }
+
+
 }
