@@ -13,6 +13,8 @@ public class LibraryConfig {
 
     @Bean
     public Library library() {
-        return new Library();
+        return new Library(libraryDbController());
     }
+
+
 }
