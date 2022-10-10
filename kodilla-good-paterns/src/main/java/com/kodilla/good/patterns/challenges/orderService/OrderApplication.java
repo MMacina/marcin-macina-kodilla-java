@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges.orderService;
 
-public class _OrderApplication {
+public class OrderApplication {
     public static void main(String[] args) {
 
         OrderRequestRetriever orderRequestRetriever = new OrderRequestRetriever();
