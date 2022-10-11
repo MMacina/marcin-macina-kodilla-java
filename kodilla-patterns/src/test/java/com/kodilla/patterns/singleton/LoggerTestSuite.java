@@ -1,7 +1,8 @@
 package com.kodilla.patterns.singleton;
 
-import com.kodilla.patterns.Logger;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LoggerTestSuite {
 
@@ -16,5 +17,6 @@ public class LoggerTestSuite {
 
         //Then
         String result = logger.getLastLog();
+        assertEquals("Some log", result);
      }
 }

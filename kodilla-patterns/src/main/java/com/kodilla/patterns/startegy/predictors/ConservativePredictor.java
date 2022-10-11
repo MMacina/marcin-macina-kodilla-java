@@ -1,6 +1,6 @@
-package com.kodilla.patterns.startegy;
+package com.kodilla.patterns.startegy.predictors;
 
-import com.kodilla.patterns.startegy.BuyPredictor;
+import com.kodilla.patterns.startegy.predictors.BuyPredictor;
 
 public final class ConservativePredictor implements BuyPredictor {
 

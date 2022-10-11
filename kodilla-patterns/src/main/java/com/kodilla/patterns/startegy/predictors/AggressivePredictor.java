@@ -1,4 +1,4 @@
-package com.kodilla.patterns.startegy;
+package com.kodilla.patterns.startegy.predictors;
 
 public final class AggressivePredictor implements BuyPredictor {
 

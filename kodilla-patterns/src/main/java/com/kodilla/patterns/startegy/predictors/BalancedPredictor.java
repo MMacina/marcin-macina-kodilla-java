@@ -1,6 +1,4 @@
-package com.kodilla.patterns.startegy;
-
-import com.kodilla.patterns.startegy.BuyPredictor;
+package com.kodilla.patterns.startegy.predictors;
 
 public final class BalancedPredictor implements BuyPredictor {
 

@@ -1,10 +1,10 @@
 package com.kodilla.patterns.strategy;
 
-import com.kodilla.patterns.startegy.CorporateCustomer;
-import com.kodilla.patterns.startegy.Customer;
-import com.kodilla.patterns.startegy.IndividualCustomer;
-import com.kodilla.patterns.startegy.IndividualYoungCustomer;
-import com.kodilla.patterns.startegy.AggressivePredictor;
+import com.kodilla.patterns.startegy.predictors.CorporateCustomer;
+import com.kodilla.patterns.startegy.predictors.Customer;
+import com.kodilla.patterns.startegy.predictors.IndividualCustomer;
+import com.kodilla.patterns.startegy.predictors.IndividualYoungCustomer;
+import com.kodilla.patterns.startegy.predictors.AggressivePredictor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

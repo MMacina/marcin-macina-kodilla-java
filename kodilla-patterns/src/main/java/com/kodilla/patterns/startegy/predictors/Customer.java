@@ -1,4 +1,4 @@
-package com.kodilla.patterns.startegy;
+package com.kodilla.patterns.startegy.predictors;
 
 public sealed class Customer permits CorporateCustomer, IndividualCustomer, IndividualYoungCustomer {
 
