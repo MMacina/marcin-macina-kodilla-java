@@ -1,8 +1,20 @@
 package com.kodilla.patterns.singleton;
 
+import com.kodilla.patterns.Logger;
+import org.junit.jupiter.api.Test;
+
 public class LoggerTestSuite {
 
-    //Bardzo przepraszam ale pojęcia nie mam co mam tu napisać.
-    // i co to są te logii...
-    //Odnosze wrażenie, że poziom abstrakcji tego modułu dalece wykracza poza moją percepcję.
+     @Test
+    void getLastLogTest() {
+        //Given
+        String log = "Some log";
+        Logger logger = Logger.INSTANCE;
+
+        //When
+        logger.log(log);
+
+        //Then
+        String result = logger.getLastLog();
+     }
 }

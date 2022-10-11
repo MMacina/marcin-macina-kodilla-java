@@ -1,6 +1,8 @@
 package com.kodilla.patterns;
 
-public class Logger {
+public enum Logger {
+
+    INSTANCE;
 
     private String lastLog = "";
 
