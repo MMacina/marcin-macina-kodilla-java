@@ -1,0 +1,11 @@
+package com.kodilla.patterns.startegy;
+
+import com.kodilla.patterns.startegy.BuyPredictor;
+
+public final class BalancedPredictor implements BuyPredictor {
+
+    @Override
+    public String predictWhatToBuy() {
+        return "[Balanced predictor] Buy shared units of Fund XYZ";
+    }
+}
