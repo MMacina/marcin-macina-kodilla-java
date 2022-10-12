@@ -13,8 +13,9 @@ public final class PaintingTask implements Task{
     }
 
     @Override
-    public void executeTask() {
-        System.out.println(taskName + " is being executed");
+    public boolean executeTask() {
+        boolean executed = true;
+        return executed;
     }
 
     @Override
@@ -24,6 +25,6 @@ public final class PaintingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return true;
+        return executeTask();
     }
 }

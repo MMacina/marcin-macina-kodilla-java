@@ -13,8 +13,9 @@ public final class DrivingTask implements Task{
     }
 
     @Override
-    public void executeTask() {
-        System.out.println(taskName + " is being executed");
+    public boolean executeTask() {
+        boolean executed = false;
+        return executed;
     }
 
     @Override
@@ -24,6 +25,6 @@ public final class DrivingTask implements Task{
 
     @Override
     public boolean isTaskExecuted() {
-        return false;
+        return executeTask();
     }
 }

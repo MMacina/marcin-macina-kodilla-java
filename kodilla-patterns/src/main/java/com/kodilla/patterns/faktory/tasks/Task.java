@@ -2,7 +2,7 @@ package com.kodilla.patterns.faktory.tasks;
 
 public interface Task {
 
-    void executeTask();
+    boolean executeTask();
     String getTaskName();
     boolean isTaskExecuted();
 }
