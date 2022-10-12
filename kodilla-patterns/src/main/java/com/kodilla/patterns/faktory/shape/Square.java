@@ -1,6 +1,8 @@
-package com.kodilla.patterns.faktory;
+package com.kodilla.patterns.faktory.shape;
 
-public final class Square implements Shape{
+import com.kodilla.patterns.faktory.shape.Shape;
+
+public final class Square implements Shape {
 
     private final String name;
     private final double width;

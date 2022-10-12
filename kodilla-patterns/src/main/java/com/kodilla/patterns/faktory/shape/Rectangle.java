@@ -1,6 +1,6 @@
-package com.kodilla.patterns.faktory;
+package com.kodilla.patterns.faktory.shape;
 
-public final class Rectangle implements Shape{
+public final class Rectangle implements Shape {
 
     private final String name;
     private final double width;

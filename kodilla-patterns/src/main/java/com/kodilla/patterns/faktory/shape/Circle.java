@@ -1,4 +1,4 @@
-package com.kodilla.patterns.faktory;
+package com.kodilla.patterns.faktory.shape;
 
 public final class Circle implements Shape {
 
