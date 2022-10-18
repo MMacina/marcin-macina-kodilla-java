@@ -1,0 +1,12 @@
+select I.SUMMARY, I.DESCRIPTION, I2.NAME
+from ISSUES I
+join ISSUESLIST I2 on I2.ID = I.ISSUESLIST_ID;
+
+select U.FIRSTNAME, U.LASTNAME, I.SUMMARY
+from USERS U
+join issues i on U.ID = i.USER_ID_ASSIGNEDTO;
+
+select U.FIRSTNAME, U.LASTNAME, count(*) as NUMBER_OF_TASKS
+from USERS U join issues i on U.ID = i.USER_ID_ASSIGNEDTO
+group by U.ID
+having count(*) >=1;
