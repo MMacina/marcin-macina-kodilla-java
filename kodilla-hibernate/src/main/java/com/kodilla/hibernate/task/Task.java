@@ -1,9 +1,11 @@
 package com.kodilla.hibernate.task;
 
 import com.sun.istack.NotNull;
+import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.util.Date;
+
 
 @Entity
 @Table(name = "Tasks")
@@ -35,7 +37,7 @@ public class Task {
         return description;
     }
 
-    @NotNull
+    @NonNull
     @Column(name="CREATED")
     public Date getCreated() {
         return created;
