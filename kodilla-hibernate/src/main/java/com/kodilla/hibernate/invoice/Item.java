@@ -69,15 +69,15 @@ public class Item {
         this.product = product;
     }
 
-    public void setPrice(BigDecimal price) {
+    private void setPrice(BigDecimal price) {
         this.price = price;
     }
 
-    public void setQuantity(int quantity) {
+    private void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public void setValue(BigDecimal value) {
+    private void setValue(BigDecimal value) {
         this.value = value;
     }
 

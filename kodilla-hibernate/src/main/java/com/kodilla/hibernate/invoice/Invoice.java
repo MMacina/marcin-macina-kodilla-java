@@ -34,12 +34,15 @@ public class Invoice {
         return number;
     }
 
+
     @OneToMany(
             targetEntity = Item.class,
             mappedBy = "invoice",
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            fetch = FetchType.EAGER
+
     )
+
     public List<Item> getItems() {
         return items;
     }
