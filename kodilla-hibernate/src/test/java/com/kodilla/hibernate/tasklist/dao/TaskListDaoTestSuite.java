@@ -25,7 +25,7 @@ public class TaskListDaoTestSuite {
     void testTaskListDaoFindByListName() {
 
         //Given
-        TaskList taskList = new TaskList(LISTNAME,DESRIPTION);
+        TaskList taskList = new TaskList(LISTNAME, DESRIPTION);
         TaskList taskList2 = new TaskList("aaa", "bbb");
 
         taskListDao.save(taskList);
