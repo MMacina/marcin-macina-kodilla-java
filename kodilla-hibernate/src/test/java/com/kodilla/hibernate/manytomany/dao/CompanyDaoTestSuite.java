@@ -99,20 +99,17 @@ public class CompanyDaoTestSuite {
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
 
+        //Then
+        List<Employee> employeeByLastname = employeeDao.findEmployeesByLastname("Smith");
+        assertEquals(1, employeeByLastname.size());
+        List<Company> companiesByThreeCharacters = companyDao.findCompanyWithFirstThreeLetters("Sof");
+        assertEquals(2, companiesByThreeCharacters.size());
+
+        //CleanUp
         try {
-            //Then
-            List<Employee> emploeeByLastname = employeeDao.findEmployeesByLastname("Smith");
-            assertEquals(1, emploeeByLastname.size());
-            List<Company> companiesByThreeCharacters = companyDao.findCompanyWithFirstThreeLetters("sof");
-            assertEquals(2, companiesByThreeCharacters.size());
-
-        } catch (Exception e) {
-        } finally {
-
-            //CleanUp
             companyDao.deleteById(softwareMachineId);
-            /*companyDao.deleteById(softwareHouseId);
-            companyDao.deleteById(greyMatterId);*/
-        }
+            companyDao.deleteById(softwareHouseId);
+            companyDao.deleteById(greyMatterId);
+        } catch (Exception e) {}
     }
 }

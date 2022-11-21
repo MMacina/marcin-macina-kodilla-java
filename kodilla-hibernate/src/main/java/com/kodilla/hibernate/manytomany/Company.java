@@ -8,7 +8,7 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.findCompanyWithFirstThreeLetters",
-        query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = SUBSTRING(:COMPANY_NAME, 1, 3)",
+        query = "SELECT * FROM COMPANIES WHERE SUBSTRING(COMPANY_NAME, 1, 3) = :PAR",
         resultClass = Company.class
 )
 @Entity
